@@ -1,3 +1,3 @@
-- This is the test task for applying for the internship in YADRO.
+- This is the testcase for the job application in YADRO.
 
 
