@@ -11,4 +11,5 @@ Classes:
 
 Run <code>mvn compile assembly:single</code> to compile the project.<br>
 Launch <code>java -jar webservice.jar</code> to deploy the server.<br>
-Then open <code>localhost:8080</code> to start working.
+Then open <code>localhost:8080</code> to start working.<br><br>
+Also available in Docker container in https://hub.docker.com/r/sokolovb/webservice/
