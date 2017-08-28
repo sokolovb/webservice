@@ -9,5 +9,6 @@ Classes:
 - PageGenerator creates the HTML-page contains the info about network devices;
 - Main rules them all and starts the server.
 
-Run <code>mvn compile assembly:single</code> to compile the project.
+Run <code>mvn compile assembly:single</code> to compile the project.<br>
+Launch <code>java -jar webservice.jar</code> to deploy the server.<br>
 Then open <code>localhost:8080</code> to start working.
