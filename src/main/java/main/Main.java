@@ -3,11 +3,13 @@ package main;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
+import org.junit.Test;
 import servlets.AllRequestsServlet;
+
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        AllRequestsServlet allRequestsServlet = new AllRequestsServlet();
+        AllRequestsServlet allRequestsServlet = new AllRequestsServlet("lshw -C net -html");
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.addServlet(new ServletHolder(allRequestsServlet), "/*");

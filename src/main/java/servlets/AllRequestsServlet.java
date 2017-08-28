@@ -11,8 +11,12 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class AllRequestsServlet extends HttpServlet {
+    private String command;
+
+    public AllRequestsServlet(String command) {
+        this.command = command;
+    }
 
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws ServletException, IOException {
@@ -32,11 +36,11 @@ public class AllRequestsServlet extends HttpServlet {
 
             ExecuteShellCommand obj = new ExecuteShellCommand();
 
-            String output = obj.executeCommand("lshw -C net");
+            String output = obj.executeCommand(command);
 
             pageVariables.put("devices", output);
 
-            response.getWriter().println(PageGenerator.instance().getPage("page.html", pageVariables));
+            response.getWriter().println(PageGenerator.instance().getPage("devices.html", pageVariables));
         }
     }
 
